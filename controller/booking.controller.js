@@ -22,6 +22,15 @@ async function getBooking(req, res) {
     const m = valueToNumber / 60 - h;
     return `${h}:${m}0`;
   };
+  const compareDates = (firstDate, secondDate) => {
+    if (firstDate.start_time < secondDate.start_time) {
+      return 1;
+    }
+    if (firstDate.start_time > secondDate.start_time) {
+      return -1;
+    }
+    return 0;
+  };
 
   const bookings = [];
   const reservations = await reservationsController.readReservations();
@@ -55,7 +64,7 @@ async function getBooking(req, res) {
       }
     }
   }
-  res.status(200).json(bookings);
+  res.status(200).json(bookings.sort(compareDates));
 }
 
 module.exports = bookingController;
