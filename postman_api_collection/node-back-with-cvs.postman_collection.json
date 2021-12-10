@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "3f98520e-684b-4eb7-a1d9-7c10fb5efac3",
+		"name": "node-back-with-cvs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get-booking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/get-booking/:id/:timestamp",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get-booking",
+						":id",
+						":timestamp"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "timestamp",
+							"value": "2020-06-20"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
