@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/hello", (req, res) => {
-  res.status(200).send("Hello from server");
-});
-
+const bookingController = require("../controller/booking.controller");
+router.get(
+  "/get-booking/:id/:timestamp",
+  bookingController.getBooking
+);
 module.exports = router;

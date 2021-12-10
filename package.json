@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/majordomos/node-bakc-with-cvs/issues"
   },
-  "homepage": "https://github.com/majordomos/node-bakc-with-cvs#readme"
+  "homepage": "https://github.com/majordomos/node-bakc-with-cvs#readme",
+  "dependencies": {
+    "csv-parser": "^3.0.0"
+  }
 }
